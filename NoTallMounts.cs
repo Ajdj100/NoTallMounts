@@ -17,7 +17,7 @@ namespace NoTallMounts
         public override string Name { get; init; } = "NoTallMounts";
         public override string Author { get; init; } = "ajdj100";
         public override List<string>? Contributors { get; init; }
-        public override SemanticVersioning.Version Version { get; init; } = new("1.0.0");
+        public override SemanticVersioning.Version Version { get; init; } = new("1.0.1");
         public override SemanticVersioning.Range SptVersion { get; init; } = new("~4.0.0");
         public override List<string>? Incompatibilities { get; init; }
         public override Dictionary<string, SemanticVersioning.Range>? ModDependencies { get; init; }
@@ -26,7 +26,7 @@ namespace NoTallMounts
         public override string License { get; init; } = "MIT";
     }
 
-    [Injectable(TypePriority = OnLoadOrder.PostDBModLoader + 1)]
+    [Injectable(TypePriority = OnLoadOrder.PostDBModLoader + 3)]
     public class NoTallMounts(ISptLogger<NoTallMounts> logger, ModHelper modHelper, DatabaseService db) : IOnLoad
     {
         public Task OnLoad()
